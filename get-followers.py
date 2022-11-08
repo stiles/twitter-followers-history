@@ -3,7 +3,7 @@ import os
 import requests
 
 # Random variables we need
-token = TWITTER_BEARER_TOKEN
+token = os.environ.get("TWITTER_BEARER_TOKEN")
 username = 'stiles'
 today = pd.Timestamp("today").strftime("%Y-%m-%d")
 headers = {
