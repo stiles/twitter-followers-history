@@ -11,10 +11,10 @@ jobs:
     steps:
 
       - name: checkout repo content
-        uses: actions/checkout@v2 # checkout repository content
+        uses: actions/checkout@v3 # checkout repository content
 
       - name: setup python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9' # install python version
           
@@ -35,7 +35,7 @@ jobs:
           git add -A
           git commit -m "update data" -a --allow-empty --author="stiles <stiles@users.noreply.github.com>"
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
