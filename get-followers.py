@@ -3,11 +3,11 @@ import os
 import requests
 
 # Random variables we need
-# token = os.getenv('twitter_bearer_token')
+token = secrets.TWITTER_BEARER_TOKEN
 username = 'stiles'
 today = pd.Timestamp("today").strftime("%Y-%m-%d")
 headers = {
-    'Authorization': f"Bearer {TWITTER_BEARER_TOKEN}",
+    'Authorization': f"Bearer {token}",
 }
 
 # Read the archive
