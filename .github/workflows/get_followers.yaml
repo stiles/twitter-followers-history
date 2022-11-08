@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
       - name: execute py script
         env: 
-          EMAIL_ADDRESS: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
           python get-followers.py
           
